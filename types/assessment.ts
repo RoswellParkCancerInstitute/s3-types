@@ -1,12 +1,12 @@
 
-import { IDomainScore, IProcedure } from './procedure';
-import { IUserInfo } from './user';
+import { DomainScore, Procedure } from './procedure';
+import { UserInfo } from './user';
 
-export interface IAssessment {
+export interface Assessment {
     id?: string;
-    procedure: IProcedure;
-    trainer: IUserInfo;
-    trainee: IUserInfo;
+    procedure: Procedure;
+    trainer: UserInfo;
+    trainee: UserInfo;
     score?: {
         total: number;
         domainsCompleted: number;
@@ -22,5 +22,5 @@ export interface IAssessment {
     totalTime?: number;
     maxScore: number;
     proportionOfDomainsCompleted?: number;
-    domainScores?: Array<IDomainScore>;
+    domainScores?: Array<DomainScore>;
 }

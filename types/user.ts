@@ -1,6 +1,6 @@
-import { IOrganization } from './organization';
+import { Organization } from './organization';
 
-export interface IUserLevel {
+export interface UserLevel {
     id?: string;
     name: string;
     canRate: Array<string>;
@@ -19,7 +19,7 @@ export enum UserLevelsFilter {
     Resident
 }
 
-export interface IUserInfo {
+export interface UserInfo {
     uid: string;
     name: string;
     displayName: string;
@@ -35,13 +35,13 @@ export interface IUserInfo {
     profileImageURL: string;
 }
 
-export interface ISpeciality {
+export interface Speciality {
     name: string;
     visible: boolean;
     procedures?: Array<string>;
 }
 
-export interface ISwapUserEvent {
-    trainee: IUserInfo;
-    trainer: IUserInfo;
+export interface SwapUserEvent {
+    trainee: UserInfo;
+    trainer: UserInfo;
 }
