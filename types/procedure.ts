@@ -22,6 +22,7 @@ export interface Domain {
     startTime?: string;
     endTime?: string;
     totalTime?: number;
+    required:boolean;
 }
 
 export interface SubDomain {
