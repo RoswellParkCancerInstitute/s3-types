@@ -28,8 +28,7 @@ export interface UserInfo {
     email: string;
     organizationId: string;
     token?: string;
-    level: string;
-    emailVerified: boolean;
+    emailVerified?: boolean;
     levelId: string;
     assessments?: Array<string>;
     profileImageURL: string;

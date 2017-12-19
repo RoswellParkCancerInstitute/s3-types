@@ -15,16 +15,16 @@ export declare const UPLOAD_STATUS: {
     UPLAODING: string;
     UPLAODED: string;
 };
-export interface IFileProperties {
+export interface FileProperties {
     type: string | 'image' | 'icon' | 'video';
     name: string;
 }
-export interface IImageUploadStatus {
+export interface ImageUploadStatus {
     state: string;
     progress: number;
     downloadURL: string;
 }
-export interface IFileTypes {
+export interface FileTypes {
     ICON: 'icon';
     IMAGE: 'image';
     VIDEO: 'video';

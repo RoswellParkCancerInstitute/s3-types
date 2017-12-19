@@ -1,4 +1,4 @@
-export interface IUserLevel {
+export interface UserLevel {
     id?: string;
     name: string;
     canRate: Array<string>;
@@ -14,7 +14,7 @@ export declare enum UserLevelsFilter {
     Fellow = 2,
     Resident = 3,
 }
-export interface IUserInfo {
+export interface UserInfo {
     uid: string;
     name: string;
     displayName: string;
@@ -23,18 +23,17 @@ export interface IUserInfo {
     email: string;
     organizationId: string;
     token?: string;
-    level: string;
-    emailVerified: boolean;
+    emailVerified?: boolean;
     levelId: string;
     assessments?: Array<string>;
     profileImageURL: string;
 }
-export interface ISpeciality {
+export interface Speciality {
     name: string;
     visible: boolean;
     procedures?: Array<string>;
 }
-export interface ISwapUserEvent {
-    trainee: IUserInfo;
-    trainer: IUserInfo;
+export interface SwapUserEvent {
+    trainee: UserInfo;
+    trainer: UserInfo;
 }

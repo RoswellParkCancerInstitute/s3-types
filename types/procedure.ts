@@ -38,20 +38,20 @@ export interface SubDomainOption {
     image: string;
 }
 
-export interface ISubDomainScoredEvent {
+export interface SubDomainScoredEvent {
     index: number;
     score: number;
 }
 
-export interface IDomainScore {
+export interface DomainScore {
     trainee: UserInfo;
     trainer: UserInfo;
     totalScore: number;
     totalTime?: number;
-    subDomainScores: Array<ISubDomainScore>;
+    subDomainScores: Array<SubDomainScore>;
 }
 
-export interface ISubDomainScore {
+export interface SubDomainScore {
     position: number;
     score: number;
 }

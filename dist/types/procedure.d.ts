@@ -1,19 +1,19 @@
-import { IDomain } from './procedure';
-import { ISpeciality, IUserInfo } from './user';
-export interface IProcedure {
+import { Domain } from './procedure';
+import { Speciality, UserInfo } from './user';
+export interface Procedure {
     name: string;
     description: string;
-    speciality: ISpeciality;
+    speciality: Speciality;
     visible: boolean;
-    domains?: Array<IDomain>;
+    domains?: Array<Domain>;
     version?: string;
 }
-export interface IDomain {
+export interface Domain {
     name: string;
-    subDomains: Array<ISubDomain>;
+    subDomains: Array<SubDomain>;
     position: number;
-    trainee: IUserInfo;
-    trainer: IUserInfo;
+    trainee: UserInfo;
+    trainer: UserInfo;
     total?: number;
     completed?: boolean;
     subDomainsCompleted?: number;
@@ -21,30 +21,30 @@ export interface IDomain {
     endTime?: string;
     totalTime?: number;
 }
-export interface ISubDomain {
+export interface SubDomain {
     name: string;
-    options: Array<ISubDomainOption>;
+    options: Array<SubDomainOption>;
     position: number;
     score?: number;
 }
-export interface ISubDomainOption {
+export interface SubDomainOption {
     text: string;
     position: number;
     value: number;
     image: string;
 }
-export interface ISubDomainScoredEvent {
+export interface SubDomainScoredEvent {
     index: number;
     score: number;
 }
-export interface IDomainScore {
-    trainee: IUserInfo;
-    trainer: IUserInfo;
+export interface DomainScore {
+    trainee: UserInfo;
+    trainer: UserInfo;
     totalScore: number;
     totalTime?: number;
-    subDomainScores: Array<ISubDomainScore>;
+    subDomainScores: Array<SubDomainScore>;
 }
-export interface ISubDomainScore {
+export interface SubDomainScore {
     position: number;
     score: number;
 }
