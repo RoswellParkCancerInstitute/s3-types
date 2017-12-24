@@ -26,12 +26,16 @@ export interface UserInfo {
     firstName: string;
     lastName: string;
     email: string;
-    organizationId: string;
+    specialityId: string;
+    organizationId?: string;
     token?: string;
     emailVerified?: boolean;
     levelId: string;
     assessments?: Array<string>;
     profileImageURL: string;
+    age?: number;
+    yearsOfExperience?: number;
+    dateCreated: Date;
 }
 
 export interface Speciality {
