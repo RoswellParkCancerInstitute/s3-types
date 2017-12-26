@@ -38,6 +38,15 @@ export interface UserInfo {
     dateCreated: Date;
 }
 
+export interface SAMLUser {
+    email: string,
+    name: string,
+    issuer: string,
+    uid: string,
+    sessionIndex: number,
+    token: string
+}
+
 export interface Speciality {
     name: string;
     visible: boolean;
