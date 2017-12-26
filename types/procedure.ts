@@ -1,5 +1,5 @@
 import { Domain } from './procedure';
-import { Speciality, UserInfo } from './user';
+import { Speciality, User } from './user';
 
 export interface Procedure {
     name: string;
@@ -14,8 +14,8 @@ export interface Domain {
     name: string;
     subDomains: Array<SubDomain>;
     position: number;
-    trainee: UserInfo;
-    trainer: UserInfo;
+    trainee: User;
+    trainer: User;
     total?: number;
     completed?: boolean;
     subDomainsCompleted?: number;
@@ -45,8 +45,8 @@ export interface SubDomainScoredEvent {
 }
 
 export interface DomainScore {
-    trainee: UserInfo;
-    trainer: UserInfo;
+    trainee: User;
+    trainer: User;
     totalScore: number;
     totalTime?: number;
     subDomainScores: Array<SubDomainScore>;

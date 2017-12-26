@@ -19,20 +19,22 @@ export enum UserLevelsFilter {
     Resident
 }
 
-export interface UserInfo {
+export interface User {
     uid: string;
-    name: string;
     displayName: string;
+    initials: string;
+    profileImageURL: string;
+}
+
+export interface UserProfile extends User {
+    name: string;
     firstName: string;
     lastName: string;
     email: string;
     specialityId: string;
     organizationId?: string;
     token?: string;
-    emailVerified?: boolean;
     levelId: string;
-    assessments?: Array<string>;
-    profileImageURL: string;
     age?: number;
     yearsOfExperience?: number;
     dateCreated: Date;
@@ -54,6 +56,6 @@ export interface Speciality {
 }
 
 export interface SwapUserEvent {
-    trainee: UserInfo;
-    trainer: UserInfo;
+    trainee: User;
+    trainer: User;
 }

@@ -1,12 +1,12 @@
 
 import { DomainScore, Procedure } from './procedure';
-import { UserInfo } from './user';
+import { User } from './user';
 
 export interface Assessment {
     id?: string;
     procedure: Procedure;
-    trainer: UserInfo;
-    trainee: UserInfo;
+    trainer: User;
+    trainee: User;
     score?: {
         total: number;
         domainsCompleted: number;
