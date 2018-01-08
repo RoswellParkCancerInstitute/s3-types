@@ -2,6 +2,7 @@ import { Domain } from './procedure';
 import { Speciality, User } from './user';
 
 export interface Procedure {
+    id?: string;
     name: string;
     description: string;
     speciality: Speciality;
@@ -11,6 +12,7 @@ export interface Procedure {
 }
 
 export interface Domain {
+    id?: string;
     name: string;
     subDomains: Array<SubDomain>;
     position: number;
@@ -26,6 +28,7 @@ export interface Domain {
 }
 
 export interface SubDomain {
+    id?: string;
     name: string;
     options: Array<SubDomainOption>;
     position: number;
@@ -33,6 +36,7 @@ export interface SubDomain {
 }
 
 export interface SubDomainOption {
+    id?: string;
     text: string;
     position: number;
     value: number;
@@ -40,6 +44,7 @@ export interface SubDomainOption {
 }
 
 export interface SubDomainScoredEvent {
+    id?: string;
     index: number;
     score: number;
 }

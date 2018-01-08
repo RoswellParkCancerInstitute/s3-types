@@ -32,24 +32,23 @@ export interface UserProfile extends User {
     lastName: string;
     email: string;
     specialityId: string;
-    organizationId?: string;
-    token?: string;
     levelId: string;
-    age?: number;
+    yearOfBirth?: number;
     yearsOfExperience?: number;
     dateCreated: Date;
 }
 
 export interface SAMLUser {
-    email: string,
-    name: string,
-    issuer: string,
-    uid: string,
-    sessionIndex: number,
-    token: string
+    email: string;
+    name: string;
+    issuer: string;
+    uid: string;
+    sessionIndex: number;
+    token: string;
 }
 
 export interface Speciality {
+    id?: string;
     name: string;
     visible: boolean;
     procedures?: Array<string>;
