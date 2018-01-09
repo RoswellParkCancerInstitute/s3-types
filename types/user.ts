@@ -24,6 +24,9 @@ export interface User {
     displayName: string;
     initials: string;
     profileImageURL: string;
+    levelId: string;
+    specialityId: string;
+    totalAssessments?: number;
 }
 
 export interface UserProfile extends User {
@@ -31,11 +34,9 @@ export interface UserProfile extends User {
     firstName: string;
     lastName: string;
     email: string;
-    specialityId: string;
-    levelId: string;
     yearOfBirth?: number;
     yearsOfExperience?: number;
-    dateCreated: Date;
+    createdTimeStamp: number;
 }
 
 export interface SAMLUser {
