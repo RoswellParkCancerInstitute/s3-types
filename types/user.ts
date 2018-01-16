@@ -36,7 +36,7 @@ export interface UserProfile extends User {
     email: string;
     yearOfBirth?: number;
     yearsOfExperience?: number;
-    createdTimeStamp: number;
+    dateCreated: number;
 }
 
 export interface SAMLUser {
