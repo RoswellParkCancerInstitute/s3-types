@@ -5,59 +5,38 @@ export interface Procedure {
     id?: string;
     name: string;
     description: string;
-    speciality: Speciality;
+    specialities: { [specialityId: string]: boolean };
     visible: boolean;
     domains?: Array<Domain>;
+    subDomains?: Array<SubDomain>;
+    subDomainOptions?: Array<SubDomainOption>;
+    images?: Array<ImageSet>;
     version?: string;
 }
 
 export interface Domain {
     id?: string;
     name: string;
-    subDomains: Array<SubDomain>;
     position: number;
-    trainee: User;
-    trainer: User;
-    total?: number;
-    completed?: boolean;
-    subDomainsCompleted?: number;
-    startTime?: string;
-    endTime?: string;
-    totalTime?: number;
-    required:boolean;
+    required: boolean;
 }
 
 export interface SubDomain {
     id?: string;
+    domainId: string;
     name: string;
-    options: Array<SubDomainOption>;
     position: number;
-    score?: number;
 }
 
 export interface SubDomainOption {
+    subDomainId: string;
     id?: string;
     text: string;
     position: number;
-    value: number;
-    image: string;
+    imageId: string;
 }
-
-export interface SubDomainScoredEvent {
-    id?: string;
-    index: number;
-    score: number;
-}
-
-export interface DomainScore {
-    trainee: User;
-    trainer: User;
-    totalScore: number;
-    totalTime?: number;
-    subDomainScores: Array<SubDomainScore>;
-}
-
-export interface SubDomainScore {
-    position: number;
-    score: number;
+export interface ImageSet {
+    id: string;
+    imageURL: string;
+    thumbnailURL: string;
 }

@@ -1,26 +1,41 @@
 
-import { DomainScore, Procedure } from './procedure';
 import { User } from './user';
 
 export interface Assessment {
     id?: string;
-    procedure: Procedure;
+    procedureId: string;
+    users?:User[];
     trainer: User;
     trainee: User;
-    score?: {
-        total: number;
-        domainsCompleted: number;
-        percentComplete: number;
-        domains: Array<{
-        }>
-    };
-    totalScore: number;
+    score: number;
+    maxScore: number;
     domainsCompleted: number;
     domainsCompletedPercentage: number;
     startTime?: string;
     endTime?: string;
     totalTime?: number;
-    maxScore: number;
     proportionOfDomainsCompleted?: number;
-    domainScores?: Array<DomainScore>;
+    domainScores: DomainScore[];
+    subDomainScores: SubDomainScore[];
+}
+
+export interface SubDomainScoredEvent {
+    id?: string;
+    index: number;
+    score: number;
+}
+
+export interface DomainScore {
+    trainee: User;
+    trainer: User;
+    score: number;
+    maxScore: number;
+    startTime: number;
+    endTime: number;
+    totalTime?: number;
+}
+
+export interface SubDomainScore {
+    domainId: string;
+    score: number;
 }
