@@ -29,6 +29,7 @@ export interface SubDomain {
 }
 
 export interface SubDomainOption {
+    domainId: string;
     subDomainId: string;
     id?: string;
     text: string;
