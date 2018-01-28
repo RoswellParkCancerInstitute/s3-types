@@ -32,9 +32,11 @@ export interface DomainScore {
     startTime: number;
     endTime: number;
     totalTime?: number;
+    domainId: string;
 }
 
 export interface SubDomainScore {
     domainId: string;
+    subDomainId: string;
     score: number;
 }
