@@ -9,8 +9,8 @@ export interface Assessment {
     maxScore: number;
     domainsCompleted: number;
     domainsCompletedPercentage: number;
-    startTime?: string;
-    endTime?: string;
+    startTime?: number;
+    endTime?: number;
     totalTime?: number;
     proportionOfDomainsCompleted?: number;
     domainScores: DomainScore[];
