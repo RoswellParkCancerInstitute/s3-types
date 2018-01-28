@@ -4,7 +4,7 @@ import { User } from './user';
 export interface Assessment {
     id?: string;
     procedureId: string;
-    surgeons:Array<{[userId:string]:number}>,
+    surgeons:{[userId:string]:number},
     score: number;
     maxScore: number;
     domainsCompleted: number;
