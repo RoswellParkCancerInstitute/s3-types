@@ -7,6 +7,7 @@ export interface Assessment {
     surgeons:{[userId:string]:number},
     score: number;
     maxScore: number;
+    totalDomains: number;
     domainsCompleted: number;
     domainsCompletedPercentage: number;
     startTime?: number;
