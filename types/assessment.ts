@@ -4,9 +4,7 @@ import { User } from './user';
 export interface Assessment {
     id?: string;
     procedureId: string;
-    users?:User[];
-    trainer: User;
-    trainee: User;
+    surgeons:Array<{[userId:string]:number}>,
     score: number;
     maxScore: number;
     domainsCompleted: number;
