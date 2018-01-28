@@ -24,8 +24,8 @@ export interface SubDomainScoredEvent {
 }
 
 export interface DomainScore {
-    trainee: User;
-    trainer: User;
+    traineeId: string;
+    trainerId: string;
     score: number;
     maxScore: number;
     startTime: number;
