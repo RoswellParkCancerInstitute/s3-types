@@ -33,6 +33,7 @@ export interface DomainScore {
     endTime: number;
     totalTime?: number;
     domainId: string;
+    required: boolean;
 }
 
 export interface SubDomainScore {
